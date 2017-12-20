@@ -5,25 +5,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AnalysisScore.Models
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Table("Student")]
     public class Student
     {
-        [Required]
+        /// <summary>
+        /// 
+        /// </summary>
+        [MaxLength(18)]
         [Key]
-        public Guid Stu_Id { get; set; }
         [Required]
-        [MaxLength(256)]
+        public string Stu_Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [MaxLength(64)]
+        [Required]
         public string Stu_Name { get; set; }
-        [Required]
-        [MaxLength(256)]
-        public string Stu_Sex { get; set; }
-        [Required]
-        public DateTime Stu_Birth { get; set; }
-        [Required]
-        public DateTime Stu_In { get; set; }
-        [Required]
-        public Guid Class_Id { get; set; }
-
-        public virtual Class Class { get; set; }
     }
 }

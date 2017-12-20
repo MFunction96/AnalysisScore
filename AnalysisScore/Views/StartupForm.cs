@@ -6,19 +6,28 @@ using System.Windows.Forms;
 
 namespace AnalysisScore.Views
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// </summary>
     public partial class StartupForm : Form
     {
         private OracleDbContext Context { get; }
+        /// <inheritdoc />
+        /// <summary>
+        /// </summary>
         public StartupForm()
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<OracleDbContext>());
             InitializeComponent();
             Context = new OracleDbContext();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            var r = from q in Context.Students select q;
+            var r = from q in Context.Scores select q;
             MessageBox.Show(r.Count().ToString());
         }
     }

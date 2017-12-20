@@ -3,16 +3,28 @@ using System.Data.Entity;
 
 namespace AnalysisScore.Data
 {
+    /// <inheritdoc />
+    /// <summary>
+    /// </summary>
     public class OracleDbContext : DbContext
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public DbSet<Student> Students { get; set; }
-        public DbSet<Class> Classes { get; set; }
-        public DbSet<Teacher> Teachers { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<Score> Scores { get; set; }
+        /// <inheritdoc />
+        /// <summary>
+        /// </summary>
+        /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("MFUNCTION");
             base.OnModelCreating(modelBuilder);
+            modelBuilder.HasDefaultSchema("MFUNCTION");
+            modelBuilder.Entity<Score>().HasKey(k => new { k.Score_Time, k.Stu_Id });
         }
     }
 }
