@@ -17,7 +17,7 @@ namespace AnalysisScore
         [STAThread]
         static void Main()
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<OracleDbContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<OracleDbContext>());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartupForm());
