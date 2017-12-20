@@ -24,5 +24,11 @@ namespace AnalysisScore.Models
         [MaxLength(64)]
         [Required]
         public string Stu_Name { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        [MaxLength(6)]
+        [Required]
+        public string Stu_Class { get; set; }
     }
 }

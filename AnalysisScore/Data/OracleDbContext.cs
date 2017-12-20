@@ -11,11 +11,11 @@ namespace AnalysisScore.Data
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<Student> Students { get; set; }
+        public virtual DbSet<Student> Students { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<Score> Scores { get; set; }
+        public virtual DbSet<Score> Scores { get; set; }
         /// <inheritdoc />
         /// <summary>
         /// </summary>
