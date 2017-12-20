@@ -25,39 +25,39 @@ namespace AnalysisScore.Models
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Chinese { get; set; }
+        public double Score_Chinese { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Math { get; set; }
+        public double Score_Math { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_English { get; set; }
+        public double Score_English { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Physics { get; set; }
+        public double Score_Physics { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Chemistry { get; set; }
+        public double Score_Chemistry { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Biology { get; set; }
+        public double Score_Biology { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Politics { get; set; }
+        public double Score_Politics { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_History { get; set; }
+        public double Score_History { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int Score_Geography { get; set; }
+        public double Score_Geography { get; set; }
         /// <summary>
         /// 
         /// </summary>

@@ -24,7 +24,7 @@ namespace AnalysisScore.Data
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema("MFUNCTION");
-            modelBuilder.Entity<Score>().HasKey(k => new { k.Score_Time, k.Stu_Id });
+            modelBuilder.Entity<Score>().HasKey(k => new { k.Stu_Id, k.Score_Time });
         }
     }
 }
