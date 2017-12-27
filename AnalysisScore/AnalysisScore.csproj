@@ -55,6 +55,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
       <Private>True</Private>
@@ -77,11 +80,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AnalysisController.cs" />
+    <Compile Include="Controllers\BrowserController.cs" />
+    <Compile Include="Controllers\ImportController.cs" />
+    <Compile Include="Controllers\StartupController.cs" />
     <Compile Include="Data\OracleDbContext.cs" />
     <Compile Include="Models\Score.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AnalysisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AnalysisForm.Designer.cs">
+      <DependentUpon>AnalysisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StartupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +121,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StartupForm.resx">
       <DependentUpon>StartupForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,9 +143,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

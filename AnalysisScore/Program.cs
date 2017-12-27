@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AnalysisScore.Data;
+﻿using AnalysisScore.Data;
 using AnalysisScore.Views;
+using System;
+using System.Data.Entity;
+using System.Windows.Forms;
 
 namespace AnalysisScore
 {

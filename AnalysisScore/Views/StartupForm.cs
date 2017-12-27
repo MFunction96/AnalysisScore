@@ -1,8 +1,8 @@
 ﻿using AnalysisScore.Data;
 using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
+using AnalysisScore.Controllers;
 
 namespace AnalysisScore.Views
 {
@@ -11,24 +11,42 @@ namespace AnalysisScore.Views
     /// </summary>
     public partial class StartupForm : Form
     {
-        private OracleDbContext Context { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public static StartupController Controller => new StartupController();
         /// <inheritdoc />
         /// <summary>
         /// </summary>
         public StartupForm()
         {
             InitializeComponent();
-            Context = new OracleDbContext();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+
+        private void BtnImport_Click(object sender, EventArgs e)
         {
-            var r = from q in Context.Scores select q;
-            MessageBox.Show(r.Count().ToString());
+            var form = new ImportForm(this);
+            Hide();
+            form.Show();
+        }
+
+        private void BtnBrowser_Click(object sender, EventArgs e)
+        {
+            var form = new BrowserForm(this);
+            Hide();
+            form.Show();
+        }
+
+        private void BtnAnalysis_Click(object sender, EventArgs e)
+        {
+            var form = new AnalysisForm(this);
+            Hide();
+            form.Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
