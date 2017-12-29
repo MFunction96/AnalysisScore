@@ -14,18 +14,20 @@ namespace AnalysisScore.Views
         /// <summary>
         /// 
         /// </summary>
-        public static StartupController Controller => new StartupController();
+        public StartupController Controller { get; }
         /// <inheritdoc />
         /// <summary>
         /// </summary>
         public StartupForm()
         {
             InitializeComponent();
+            Controller = new StartupController();
         }
 
         private void BtnImport_Click(object sender, EventArgs e)
         {
-            var form = new ImportForm(this);
+            var filepath = Controller.SelectExcel();
+            var form = new ExcelForm(this, filepath);
             Hide();
             form.Show();
         }

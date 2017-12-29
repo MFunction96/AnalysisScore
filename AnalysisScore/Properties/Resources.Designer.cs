@@ -61,6 +61,42 @@ namespace AnalysisScore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Biology.
+        /// </summary>
+        internal static string Biology {
+            get {
+                return ResourceManager.GetString("Biology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chemistry.
+        /// </summary>
+        internal static string Chemistry {
+            get {
+                return ResourceManager.GetString("Chemistry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chinese.
+        /// </summary>
+        internal static string Chinese {
+            get {
+                return ResourceManager.GetString("Chinese", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Excel文件|*.xls;*.xlsx.
         /// </summary>
         internal static string ExcelFileType {
@@ -70,11 +106,65 @@ namespace AnalysisScore.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Geography.
+        /// </summary>
+        internal static string Geography {
+            get {
+                return ResourceManager.GetString("Geography", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        internal static string History {
+            get {
+                return ResourceManager.GetString("History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Math.
+        /// </summary>
+        internal static string Math {
+            get {
+                return ResourceManager.GetString("Math", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Physics.
+        /// </summary>
+        internal static string Physics {
+            get {
+                return ResourceManager.GetString("Physics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 请选择文件.
         /// </summary>
         internal static string PickFileTitle {
             get {
                 return ResourceManager.GetString("PickFileTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Politics.
+        /// </summary>
+        internal static string Politics {
+            get {
+                return ResourceManager.GetString("Politics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stuid.
+        /// </summary>
+        internal static string StuId {
+            get {
+                return ResourceManager.GetString("StuId", resourceCulture);
             }
         }
     }
